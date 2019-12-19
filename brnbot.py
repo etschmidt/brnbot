@@ -22,8 +22,8 @@ link = card.attrs['href']
 import tweepy
 
 # Authenticate to Twitter
-auth = tweepy.OAuthHandler("R01stciClYF60ycRGvqrhwGsn", "0SzVv7JYuljAYiojQ3pHNaUHhgdYNQjdua5JivT8UxLSiYYJ4R")
-auth.set_access_token("1072002479137669123-BCgOEnZJVWS2G5etIFZ6lpg3Y5Cv7C", "4xXvcI3n5hhIdfahq9R2SGqapJYBbRMi50spgC4t3BIRp")
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 api = tweepy.API(auth)
 
