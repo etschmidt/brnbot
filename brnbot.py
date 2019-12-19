@@ -30,4 +30,4 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 
 api = tweepy.API(auth)
 
-api.update_status("From the archives:\n\n" + link)
+api.update_status("From the archives:\n\n" + title + " " + link)
