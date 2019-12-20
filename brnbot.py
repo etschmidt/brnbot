@@ -20,13 +20,13 @@ link = card.attrs['href']
 
 print(title + " " + link)
 
-post_page = requests.get(link)
-soup = BeautifulSoup(post_page.content, 'html.parser')
+# post_page = requests.get(link)
+# soup = BeautifulSoup(post_page.content, 'html.parser')
 
-image = soup.find("img",  {"class": "featured-image"})
-image_src = image.attrs['src'] + "?" + str(random.random())
+# image = soup.find("img",  {"class": "featured-image"})
+# image_src = image.attrs['src'] + "?" + str(random.random())
 
-print(image_src)
+# print(image_src)
 
 CONSUMER_KEY = environ['CONSUMER_KEY']
 CONSUMER_SECRET = environ['CONSUMER_SECRET']
@@ -39,4 +39,4 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 
 api = tweepy.API(auth)
 
-api.update_status("From the archives:\n\n" + title + " " + link + " "+  image_src)
+api.update_status("From the archives:\n\n" + title + " " + link)
